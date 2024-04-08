@@ -2,5 +2,5 @@
 
 ## Integrantes
 - Joaquin
-- Manuel
 - Nicolas
+- Manuel
