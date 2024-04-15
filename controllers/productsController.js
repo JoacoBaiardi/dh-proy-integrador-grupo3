@@ -1,13 +1,13 @@
-const seconddata = require('../db/seconddata')
+const products = require('../db/products')
 const controller = {
 main: function (req,res) {
     res.send('algo')
 },
 detail: function (req,res) {
         const id = req.params.id
-        for (let i = 0; i < seconddata.length; i++) {
-            if (Number(id)===Number(seconddata[i].id)) {
-                res.send(`algo ${seconddata[i].algo}.`)
+        for (let i = 0; i < products.length; i++) {
+            if (Number(id)===Number(products[i].id)) {
+                res.send(`algo ${products[i].algo}.`)
             }
         }
         res.send('no se encontro') 
