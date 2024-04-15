@@ -1,5 +1,5 @@
 const products = require('../db/products')
-const controller = {
+const productsController = {
 main: function (req,res) {
     res.send('algo')
 },
