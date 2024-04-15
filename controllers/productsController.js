@@ -1,4 +1,4 @@
-const products = require('../db/products')
+const products = require('../db/products.js/productos')
 const productsController = {
 main: function (req,res) {
     res.send('algo')
