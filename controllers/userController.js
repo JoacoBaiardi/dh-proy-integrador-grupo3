@@ -20,6 +20,16 @@ profile: function (req, res) {
     res.render('profile', {
         title: "Mercado Liebre"
     })
+},
+register: function(req, res) {
+    res.render('register', {
+        title: 'Mercado Liebre'
+    })
+},
+profileEdit: function(req, res){
+    res.render('profile-edit', {
+        title:'Mercado Liebre'
+    })
 }
 }
 module.exports = userController
