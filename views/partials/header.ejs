@@ -33,8 +33,38 @@
             </ul>
 
             <ul class="right-navbar">
+                <h2>Registracion:</h2>
+                <form action="headerLogueado.ejs" method="get">
+                    <label>Email:</label><input type="email" name="mail" value="">
+                    <label>Usuario:</label><input type="text" name="user" value="">
+                    <label>Contrasenia:</label><input type="password" name="contrasenia" value="">
+                    <label>Fecha de nacimiento:</label><input type="date" name="fda" value="">
+                    <label>Nro de documento:</label><input type="number" name="documento" value="">
+                    <label>Foto de perfil:</label><input type="text" name="foto" value="">
+                </form>
+                <h2>Login:</h2>
+                <form action="headerLogueado.ejs" method="get">
+                    <label>Usuario:</label><input type="email" name="user" value="">
+                    <label>Contrasenia:</label><input type="password" name="contrasenia" value="">
+                    <input type="checkbox" name="recordame" value="si">
+                </form>
+                <h2>Editar mi perfil:</h2>
+                <form action="headerLogueado.ejs">
+                    <label>Email:</label><input type="email" name="mail" value="">
+                    <label>Usuario:</label><input type="text" name="user" value="">
+                    <label>Contrasenia:</label><input type="password" name="contrasenia" value="">
+                    <label>Fecha de nacimiento:</label><input type="date" name="fda" value="">
+                    <label>Nro de documento:</label><input type="number" name="documento" value="">
+                    <label>Foto de perfil:</label><input type="text" name="foto" value="">
+                </form>
+                <h2>Agregar producto:</h2>
+                <form action="headerLogueado.ejs" method="get">
+                    <label>Imagen:</label><input type="file" name="imagen" value="">
+                    <label>Nombre del producto:</label><input type="text" name="ndp" value="">
+                    <label>Descripcion:</label><input type="text" name="descripcion" value="">
+                </form>
                 <!-- Solo logueado <li><a href="profile.html">
-                        Nombre del usuario <i class="fas fa-user"></i>
+                    Nombre del usuario <i class="fas fa-user"></i>
                     </a>
                 </li>
                 <li>

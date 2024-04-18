@@ -1,4 +1,4 @@
-const users = require('../db/database.js/usuarios')
+const users = require('../db/database.js')
 const userController = {
 main: function (req,res) {
     res.send('algo')
