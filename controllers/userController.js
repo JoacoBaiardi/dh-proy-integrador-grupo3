@@ -1,4 +1,5 @@
 const users = require('../db/database.js')
+index = users.usuarios
 const userController = {
 login: function (req,res) {
     res.render('login', {

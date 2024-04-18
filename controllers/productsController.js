@@ -1,4 +1,5 @@
-const products = require('../db/database.js')
+const prods = require('../db/database.js')
+indProd = prods.products
 const productsController = {
 main: function (req,res) {
     res.send('algo')
