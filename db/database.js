@@ -52,7 +52,7 @@ const lista = {
             id: 18,
             nombre: "Toyota Corolla",
             descripcion: "El Toyota Corolla es un automóvil del segmento C producido por el fabricante japonés Toyota desde el año 1966.",
-            imagen: "ruta/a/auto1.jpg",
+            imagen: "auto1.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario1",
@@ -75,7 +75,7 @@ const lista = {
             id: 19,
             nombre: "Volkswagen Golf",
             descripcion: "El Volkswagen Golf es un automóvil del segmento C producido por el fabricante alemán Volkswagen desde 1974",
-            imagen: "ruta/a/auto2.jpg",
+            imagen: "auto2.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario2",
@@ -98,7 +98,7 @@ const lista = {
             id: 26,
             nombre: "Nissan Altima",
             descripcion: "El Nissan Altima es un automóvil del segmento D producido por el fabricante japonés Nissan desde 1992.",
-            imagen: "ruta/a/auto9.jpg",
+            imagen: "auto9.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario4",
@@ -121,7 +121,7 @@ const lista = {
             id: 21,
             nombre: "Honda Civic",
             descripcion: "El Honda Civic es un automóvil del segmento C producido por el fabricante japonés Honda desde 1972.",
-            imagen: "ruta/a/auto4.jpg",
+            imagen: "auto4.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario4",
@@ -144,7 +144,7 @@ const lista = {
             id: 22,
             nombre: "BMW Serie 3",
             descripcion: "El BMW Serie 3 es un automóvil del segmento D producido por el fabricante alemán BMW desde 1975.",
-            imagen: "ruta/a/auto5.jpg",
+            imagen: "auto5.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario5",
@@ -167,7 +167,7 @@ const lista = {
             id: 23,
             nombre: "Chevrolet Camaro",
             descripcion: "El Chevrolet Camaro es un automóvil deportivo producido por el fabricante estadounidense Chevrolet desde 1966.",
-            imagen: "ruta/a/auto6.jpg",
+            imagen: "auto6.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario2",
@@ -190,7 +190,7 @@ const lista = {
             id: 24,
             nombre: "Mercedes-Benz Clase C",
             descripcion: "El Mercedes-Benz Clase C es un automóvil del segmento D producido por el fabricante alemán Mercedes-Benz desde 1993.",
-            imagen: "ruta/a/auto7.jpg",
+            imagen: "auto7.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario2",
@@ -213,7 +213,7 @@ const lista = {
             id: 25,
             nombre: "Audi A4",
             descripcion: "El Audi A4 es un automóvil del segmento D producido por el fabricante alemán Audi desde 1994.",
-            imagen: "ruta/a/auto8.jpg",
+            imagen: "auto8.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario3",
@@ -236,7 +236,7 @@ const lista = {
             id: 20,
             nombre: "Ford Mustang",
             descripcion: "El Ford Mustang es un automóvil deportivo producido por el fabricante estadounidense Ford desde 1964.",
-            imagen: "ruta/a/auto3.jpg",
+            imagen: "auto3.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario3",
@@ -259,7 +259,7 @@ const lista = {
             id: 27,
             nombre: "Mazda CX-5",
             descripcion: "El Mazda CX-5 es un automóvil del segmento C producido por el fabricante japonés Mazda desde 2012.",
-            imagen: "ruta/a/auto10.jpg",
+            imagen: "auto10.jpg",
             comentarios: [
                 {
                     nombreUsuario: "Usuario4",
