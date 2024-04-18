@@ -4,4 +4,4 @@ main: function (req,res) {
     res.send('main')
 }}
 
-module.exports = controller
+module.exports = mainController
