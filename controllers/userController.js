@@ -1,7 +1,9 @@
 const users = require('../db/database.js')
 const userController = {
-main: function (req,res) {
-    res.send('algo')
+login: function (req,res) {
+    res.render('login', {
+        title: 'Mercado Liebre'
+    })
 },
 detail: function (req,res) {
         const id = req.params.id
@@ -12,5 +14,11 @@ detail: function (req,res) {
         }
         res.send('no se encontro') 
     },
+
+profile: function (req, res) {
+    res.render('profile', {
+        title: "Mercado Liebre"
+    })
+}
 }
 module.exports = userController
