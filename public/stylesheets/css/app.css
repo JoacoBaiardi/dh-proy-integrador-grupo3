@@ -29,7 +29,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-image: url('/images/blackground.jpg');
 }
 
 ul,
@@ -108,7 +108,6 @@ hr {
   color: var(--gray);
   cursor: pointer;
 }
-
 
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {

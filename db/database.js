@@ -43,7 +43,7 @@ const lista = {
           password: "contraseña5",
           fechaNacimiento: "1994-05-05",
           numeroDocumento: "56789012",
-          fotoPerfil: "ruta/a/foto5.jpg"
+          fotoPerfil: "/users/default-image.png"
         }
       ],
     
@@ -57,17 +57,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario1",
                     textoComentario: "Este auto es asombroso!",
-                    imagenPerfil: "ruta/a/imagenPerfil1.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Me gusta mucho este auto.",
-                    imagenPerfil: "ruta/a/imagenPerfil5.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Este auto es asombroso!.",
-                    imagenPerfil: "ruta/a/imagenPerfil5.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 }
             ]
         },
@@ -218,17 +218,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario3",
                     textoComentario: "Es una maravilla, me encanta.",
-                    imagenPerfil: "ruta/a/imagenPerfil3.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 },
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "Este auto cumple con todas mis expectativas.",
-                    imagenPerfil: "ruta/a/imagenPerfil4.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
-                    imagenPerfil: "ruta/a/imagenPerfil5.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 }
             ]
         },
