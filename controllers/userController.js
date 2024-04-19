@@ -3,7 +3,7 @@ index = users.usuarios
 const userController = {
 login: function (req,res) {
     res.render('login', {
-        title: 'Mercado Liebre'
+        title: 'MotorMarket'
     })
 },
 detail: function (req,res) {
@@ -18,17 +18,17 @@ detail: function (req,res) {
 
 profile: function (req, res) {
     res.render('profile', {
-        title: "Mercado Liebre"
+        title: "MotorMarket"
     })
 },
 register: function(req, res) {
     res.render('register', {
-        title: 'Mercado Liebre'
+        title: 'MotorMarket'
     })
 },
 profileEdit: function(req, res){
     res.render('profile-edit', {
-        title:'Mercado Liebre'
+        title:'MotorMarket'
     })
 }
 }

@@ -10,7 +10,7 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --base-font-family: 'Roboto', sans-serif;
 }
 
 
@@ -68,7 +68,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: #ffffff;
 }
 
 .main-header_home-link,
@@ -155,7 +155,7 @@ hr {
 /*====== Banner ======*/
 .banner {
   background-image: url(/images/img-home-banner.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center center;
   height: 100px;
@@ -171,7 +171,7 @@ hr {
 .products-title {
   font-size: 2.4em;
   font-weight: 400;
-  color: var(--gray);
+  color: var(--light-gray);
 }
 
 .product-box {
