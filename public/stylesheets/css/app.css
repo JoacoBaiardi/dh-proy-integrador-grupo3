@@ -258,13 +258,17 @@ hr {
 
 /*====== Footer ======*/
 .main-footer {
-  background-color: #ffffff;
+  background: radial-gradient(circle, hsla(30, 16%, 87%, 1) 0%, hsla(0, 0%, 0%, 1) 95%);
   padding: 20px 0;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 80px;
 }
 
 .footer-data {
   text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .footer-data i {
@@ -273,13 +277,17 @@ hr {
 }
 
 .footer-data h2 {
-  color: var(--gray);
+  color: black;
+  padding-left: 5%;
+  padding-right: 5%;
   font-size: 2.4em;
   font-weight: 400;
 }
 
 .footer-data p {
-  color: var(--gray);
+  color: black;
+  padding-left: 5%;
+  padding-right: 5%;
   font-size: 1.5em;
   font-weight: 300;
 }
