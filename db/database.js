@@ -49,7 +49,7 @@ const lista = {
     
       productos: [
         {
-            id: 18,
+            id: 0,
             nombre: "Toyota Corolla",
             descripcion: "El Toyota Corolla es un automóvil del segmento C producido por el fabricante japonés Toyota desde el año 1966.",
             imagen: "auto1.jpg",
@@ -72,7 +72,7 @@ const lista = {
             ]
         },
         {
-            id: 19,
+            id: 1,
             nombre: "Volkswagen Golf",
             descripcion: "El Volkswagen Golf es un automóvil del segmento C producido por el fabricante alemán Volkswagen desde 1974",
             imagen: "auto2.jpg",
@@ -95,7 +95,7 @@ const lista = {
             ]
         },
         {
-            id: 26,
+            id: 2,
             nombre: "Nissan Altima",
             descripcion: "El Nissan Altima es un automóvil del segmento D producido por el fabricante japonés Nissan desde 1992.",
             imagen: "auto9.jpg",
@@ -118,7 +118,7 @@ const lista = {
             ]
         },
         {
-            id: 21,
+            id: 3,
             nombre: "Honda Civic",
             descripcion: "El Honda Civic es un automóvil del segmento C producido por el fabricante japonés Honda desde 1972.",
             imagen: "auto4.jpg",
@@ -141,7 +141,7 @@ const lista = {
             ]
         },
         {
-            id: 22,
+            id: 4,
             nombre: "BMW Serie 3",
             descripcion: "El BMW Serie 3 es un automóvil del segmento D producido por el fabricante alemán BMW desde 1975.",
             imagen: "auto5.jpg",
@@ -149,7 +149,7 @@ const lista = {
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Que buena eleccion, este auto es genial",
-                    imagenPerfil: "ruta/a/imagenPerfil5.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 },
                 {
                     nombreUsuario: "Usuario4",
@@ -164,7 +164,7 @@ const lista = {
             ]
         },
         {
-            id: 23,
+            id: 5,
             nombre: "Chevrolet Camaro",
             descripcion: "El Chevrolet Camaro es un automóvil deportivo producido por el fabricante estadounidense Chevrolet desde 1966.",
             imagen: "auto6.jpg",
@@ -177,7 +177,7 @@ const lista = {
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "El mejor auto que he visto en mucho tiempo.",
-                    imagenPerfil: "ruta/a/imagenPerfil5.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 },
                 {
                     nombreUsuario: "Usuario4",
@@ -187,7 +187,7 @@ const lista = {
             ]
         },
         {
-            id: 24,
+            id: 6,
             nombre: "Mercedes-Benz Clase C",
             descripcion: "El Mercedes-Benz Clase C es un automóvil del segmento D producido por el fabricante alemán Mercedes-Benz desde 1993.",
             imagen: "auto7.jpg",
@@ -205,12 +205,12 @@ const lista = {
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Gran auto, definitivamente lo compraria.",
-                    imagenPerfil: "ruta/a/imagenPerfil5.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 }
             ]
         },
         {
-            id: 25,
+            id: 7,
             nombre: "Audi A4",
             descripcion: "El Audi A4 es un automóvil del segmento D producido por el fabricante alemán Audi desde 1994.",
             imagen: "auto8.jpg",
@@ -228,12 +228,12 @@ const lista = {
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
-                    imagenPerfil: "../images/users/usuario5.jpg"
+                    imagenPerfil: "../images/users/default-image.png"
                 }
             ]
         },
         {
-            id: 20,
+            id: 8,
             nombre: "Ford Mustang",
             descripcion: "El Ford Mustang es un automóvil deportivo producido por el fabricante estadounidense Ford desde 1964.",
             imagen: "auto3.jpg",
@@ -256,7 +256,7 @@ const lista = {
             ]
         },
         {
-            id: 27,
+            id: 9,
             nombre: "Mazda CX-5",
             descripcion: "El Mazda CX-5 es un automóvil del segmento C producido por el fabricante japonés Mazda desde 2012.",
             imagen: "auto10.jpg",

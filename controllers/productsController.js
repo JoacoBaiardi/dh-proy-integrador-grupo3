@@ -4,7 +4,8 @@ indProd = prods.productos
 const productsController = {
     detail: function (req,res) {
         res.render(`product`,{
-            title: "Motor Market"
+            title: "Motor Market",
+            id:req.params.id
                 })
             },
     
