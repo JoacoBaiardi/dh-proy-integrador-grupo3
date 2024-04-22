@@ -1,6 +1,6 @@
 /*====== Fonts ======*/
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /*====== Variables ======*/
 :root {
@@ -10,7 +10,7 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif;
+  --base-font-family: 'Titillium Web', sans-serif; 
 }
 
 
@@ -64,11 +64,21 @@ hr {
   border-bottom: solid 1px var(--light-gray);
 }
 
+h2,
+h1,
+h3 {
+  font-family: "Mulish", sans-serif;
+}
+  
+#news {
+  color: var(--light-gray);
+}
 
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
   background-color: #ffffff;
+  box-shadow: 2px  var(--gray);
 }
 
 .main-header_home-link,
@@ -263,17 +273,14 @@ hr {
 
 /*====== Footer ======*/
 .main-footer {
-  background: radial-gradient(circle, hsla(30, 16%, 87%, 1) 0%, hsla(0, 0%, 0%, 1) 95%);
+  background-color: #ffffff;
   padding: 20px 0;
-  padding-left: 5%;
-  padding-right: 5%;
   margin-top: 80px;
+  box-shadow: 2px  var(--gray);
 }
 
 .footer-data {
   text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .footer-data i {
@@ -282,17 +289,13 @@ hr {
 }
 
 .footer-data h2 {
-  color: black;
-  padding-left: 5%;
-  padding-right: 5%;
+  color: var(--gray);
   font-size: 2.4em;
   font-weight: 400;
 }
 
 .footer-data p {
-  color: black;
-  padding-left: 5%;
-  padding-right: 5%;
+  color: var(--gray);
   font-size: 1.5em;
   font-weight: 300;
 }
@@ -305,7 +308,7 @@ hr {
 .sub-footer p {
   margin: 0;
   color: var(--gray);
-  padding: 15px 0;
+  padding: 15px 0;
 }
 
 
@@ -496,10 +499,6 @@ textarea.form-input {
     text-align: right;
   }
   
-  .main-header{
-    background: linear-gradient(180deg, hsla(0, 0%, 100%, 1) 92%, hsla(0, 0%, 0%, 1) 100%);
-  }
-
   .banner {
     height: 320px;
     background: linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
