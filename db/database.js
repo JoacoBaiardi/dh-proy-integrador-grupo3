@@ -218,7 +218,7 @@ const lista = {
                 {
                     nombreUsuario: "Usuario3",
                     textoComentario: "Es una maravilla, me encanta.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
                     nombreUsuario: "Usuario4",
@@ -228,7 +228,7 @@ const lista = {
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario5.jpg"
                 }
             ]
         },

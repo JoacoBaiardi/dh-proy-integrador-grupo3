@@ -29,7 +29,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-image: url('/images/blackground.jpg');
+  background-color:var(--light-gray);
 }
 
 ul,
@@ -170,7 +170,7 @@ hr {
 .products-title {
   font-size: 2.4em;
   font-weight: 400;
-  color: var(--light-gray);
+  color: black;
 }
 
 .product-box {
