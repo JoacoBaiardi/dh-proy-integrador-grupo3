@@ -7,7 +7,7 @@ const lista = {
           password: "contraseña1",
           fechaNacimiento: "1990-01-01",
           numeroDocumento: "12345678A",
-          fotoPerfil: "default-image.png"
+          fotoPerfil: "usuario1.jpg"
         },
         {
           id: 2,
@@ -16,7 +16,7 @@ const lista = {
           password: "contraseña2",
           fechaNacimiento: "1991-02-02",
           numeroDocumento: "23456789B",
-          fotoPerfil: "ruta/a/foto2.jpg"
+          fotoPerfil: "usuario2.jpg"
         },
         {
           id: 3,
@@ -25,7 +25,7 @@ const lista = {
           password: "contraseña3",
           fechaNacimiento: "1992-03-03",
           numeroDocumento: "34567890C",
-          fotoPerfil: "ruta/a/foto3.jpg"
+          fotoPerfil: "usuario3.jpg"
         },
         {
           id: 4,
@@ -34,7 +34,7 @@ const lista = {
           password: "contraseña4",
           fechaNacimiento: "1993-04-04",
           numeroDocumento: "45678901",
-          fotoPerfil: "ruta/a/foto4.jpg"
+          fotoPerfil: "usuario4.png"
         },
         {
           id: 5,
@@ -43,7 +43,7 @@ const lista = {
           password: "contraseña5",
           fechaNacimiento: "1994-05-05",
           numeroDocumento: "56789012",
-          fotoPerfil: "/users/default-image.png"
+          fotoPerfil: "usuario5.jpg"
         }
       ],
     
@@ -57,17 +57,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario1",
                     textoComentario: "Este auto es asombroso!",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario1.jpg"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Me gusta mucho este auto.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario5.jpg"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Este auto es asombroso!.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario5.jpg"
                 }
             ]
         },
@@ -80,17 +80,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario2",
                     textoComentario: "Increible vehiculo, estoy impresionado.",
-                    imagenPerfil: "ruta/a/imagenPerfil2.jpg"
+                    imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
                     nombreUsuario: "Usuario1",
                     textoComentario: "Que gran compra!",
-                    imagenPerfil: "ruta/a/imagenPerfil1.jpg"
+                    imagenPerfil: "../images/users/usuario1.jpg"
                 },
                 {
                     nombreUsuario: "Usuario1",
                     textoComentario: "Increible vehiculo, estoy impresionado.",
-                    imagenPerfil: "ruta/a/imagenPerfil1.jpg"
+                    imagenPerfil: "../images/users/usuario1.jpg"
                 }
             ]
         },
@@ -103,17 +103,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "Una belleza de auto.",
-                    imagenPerfil: "ruta/a/imagenPerfil4.jpg"
+                    imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
                     nombreUsuario: "Usuario3",
                     textoComentario: "Un auto muy versatil.",
-                    imagenPerfil: "ruta/a/imagenPerfil3.jpg"
+                    imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
                     nombreUsuario: "Usuario1",
                     textoComentario: "Gran auto, definitivamente lo compraria.",
-                    imagenPerfil: "ruta/a/imagenPerfil1.jpg"
+                    imagenPerfil: "../images/users/usuario1.jpg"
                 }
             ]
         },
@@ -126,17 +126,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "Me encanta este modelo.",
-                    imagenPerfil: "ruta/a/imagenPerfil4.jpg"
+                    imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
                     nombreUsuario: "Usuario3",
                     textoComentario: "Increible vehiculo estoy impresionado.",
-                    imagenPerfil: "ruta/a/imagenPerfil3.jpg"
+                    imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
                     nombreUsuario: "Usuario3",
                     textoComentario: "Que buena eleccion, este auto es genial.",
-                    imagenPerfil: "ruta/a/imagenPerfil3.jpg"
+                    imagenPerfil: "../images/users/usuario3.jpg"
                 }
             ]
         },
@@ -149,17 +149,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Que buena eleccion, este auto es genial",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario5.jpg"
                 },
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "Realmente me gusta este modelo.",
-                    imagenPerfil: "ruta/a/imagenPerfil4.jpg"
+                    imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
                     nombreUsuario: "Usuario3",
                     textoComentario: "Que buena eleccion, este auto es genial.",
-                    imagenPerfil: "ruta/a/imagenPerfil3.jpg"
+                    imagenPerfil: "../images/users/usuario3.jpg"
                 }
             ]
         },
@@ -172,17 +172,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario2",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
-                    imagenPerfil: "ruta/a/imagenPerfil2.jpg"
+                    imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "El mejor auto que he visto en mucho tiempo.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario5.jpg"
                 },
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
-                    imagenPerfil: "ruta/a/imagenPerfil4.jpg"
+                    imagenPerfil: "../images/users/usuario4.png"
                 }
             ]
         },
@@ -195,17 +195,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario2",
                     textoComentario: "Gran auto, definitivamente lo compraria.",
-                    imagenPerfil: "ruta/a/imagenPerfi2.jpg"
+                    imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
                     nombreUsuario: "Usuario1",
                     textoComentario: "Un auto muy versatil.",
-                    imagenPerfil: "ruta/a/imagenPerfil1.jpg"
+                    imagenPerfil: "../images/users/usuario1.jpg"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Gran auto, definitivamente lo compraria.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario5.jpg"
                 }
             ]
         },
@@ -223,12 +223,12 @@ const lista = {
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "Este auto cumple con todas mis expectativas.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
                     nombreUsuario: "Usuario5",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
-                    imagenPerfil: "../images/users/default-image.png"
+                    imagenPerfil: "../images/users/usuario5.jpg"
                 }
             ]
         },
@@ -241,17 +241,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario3",
                     textoComentario: "Realmente me gusta este modelo.",
-                    imagenPerfil: "ruta/a/imagenPerfil3.jpg"
+                    imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
                     nombreUsuario: "Usuario2",
                     textoComentario: "Este auto es asombroso!.",
-                    imagenPerfil: "ruta/a/imagenPerfil2.jpg"
+                    imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
                     nombreUsuario: "Usuario2",
                     textoComentario: "Que buena eleccion, este auto es genial.",
-                    imagenPerfil: "ruta/a/imagenPerfil2.jpg"
+                    imagenPerfil: "../images/users/usuario2.jpg"
                 }
             ]
         },
@@ -264,17 +264,17 @@ const lista = {
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "El diseno de este modelo es impresionante.",
-                    imagenPerfil: "ruta/a/imagenPerfil4.jpg"
+                    imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
                     nombreUsuario: "Usuario4",
                     textoComentario: "Este auto cumple con todas mis expectativas.",
-                    imagenPerfil: "ruta/a/imagenPerfil4.jpg"
+                    imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
                     nombreUsuario: "Usuario2",
                     textoComentario: "Es una maravilla, me encanta.",
-                    imagenPerfil: "ruta/a/imagenPerfil2.jpg"
+                    imagenPerfil: "../images/users/usuario2.jpg"
                 }
             ]
               }
