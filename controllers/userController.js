@@ -18,17 +18,17 @@ detail: function (req,res) {
 
 profile: function (req, res) {
     res.render('profile', {
-        title: "MotorMarket"
+        title: "Motor Market"
     })
 },
 register: function(req, res) {
     res.render('register', {
-        title: 'MotorMarket'
+        title: 'Motor Market'
     })
 },
 profileEdit: function(req, res){
     res.render('profile-edit', {
-        title:'MotorMarket'
+        title:'Motor Market'
     })
 }
 }

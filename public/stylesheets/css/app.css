@@ -1,5 +1,5 @@
 /*====== Fonts ======*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@500&display=swap');
 
 
 /*====== Variables ======*/
@@ -188,6 +188,11 @@ hr {
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
 }
+
+.product-box_image img{
+  height: 150px;
+}
+
 
 .product-box_data {
   padding: 15px;

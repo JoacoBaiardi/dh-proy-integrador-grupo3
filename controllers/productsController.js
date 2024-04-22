@@ -1,6 +1,5 @@
 const prods = require('../db/database.js')
 indProd = prods.productos
-
 const productsController = {
     detail: function (req,res) {
         res.render(`product`,{
@@ -14,6 +13,6 @@ const productsController = {
             title: 'Motor Market'
         })
     }
-    
     }
+    
 module.exports = productsController
