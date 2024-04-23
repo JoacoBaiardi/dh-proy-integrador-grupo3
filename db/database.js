@@ -3,7 +3,7 @@ const lista = {
         {
           id: 1,
           email: "usuario1@example.com",
-          usuario: "usuario1",
+          usuario: "PichonAdvincula",
           password: "contraseña1",
           fechaNacimiento: "1990-01-01",
           numeroDocumento: "12345678A",
@@ -55,17 +55,17 @@ const lista = {
             imagen: "auto1.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario1",
+                    nombreUsuario: "PichonAdvincula",
                     textoComentario: "Este auto es asombroso!",
                     imagenPerfil: "../images/users/usuario1.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario5",
+                    nombreUsuario: "BestiaMerentiel",
                     textoComentario: "Me gusta mucho este auto.",
                     imagenPerfil: "../images/users/usuario5.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario5",
+                    nombreUsuario: "BestiaMerentiel",
                     textoComentario: "Este auto es asombroso!.",
                     imagenPerfil: "../images/users/usuario5.jpg"
                 }
@@ -78,17 +78,17 @@ const lista = {
             imagen: "auto2.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario2",
+                    nombreUsuario: "JavitoGarcia",
                     textoComentario: "Increible vehiculo, estoy impresionado.",
                     imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario1",
+                    nombreUsuario: "PichonAdvincula",
                     textoComentario: "Que gran compra!",
                     imagenPerfil: "../images/users/usuario1.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario1",
+                    nombreUsuario: "PichonAdvincula",
                     textoComentario: "Increible vehiculo, estoy impresionado.",
                     imagenPerfil: "../images/users/usuario1.jpg"
                 }
@@ -101,17 +101,17 @@ const lista = {
             imagen: "auto9.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario4",
+                    nombreUsuario: "CrisLema",
                     textoComentario: "Una belleza de auto.",
                     imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
-                    nombreUsuario: "Usuario3",
+                    nombreUsuario: "EdiCava",
                     textoComentario: "Un auto muy versatil.",
                     imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario1",
+                    nombreUsuario: "PichonAdvincula",
                     textoComentario: "Gran auto, definitivamente lo compraria.",
                     imagenPerfil: "../images/users/usuario1.jpg"
                 }
@@ -124,17 +124,17 @@ const lista = {
             imagen: "auto4.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario4",
+                    nombreUsuario: "CrisLema",
                     textoComentario: "Me encanta este modelo.",
                     imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
-                    nombreUsuario: "Usuario3",
+                    nombreUsuario: "EdiCava",
                     textoComentario: "Increible vehiculo estoy impresionado.",
                     imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario3",
+                    nombreUsuario: "EdiCava",
                     textoComentario: "Que buena eleccion, este auto es genial.",
                     imagenPerfil: "../images/users/usuario3.jpg"
                 }
@@ -147,17 +147,17 @@ const lista = {
             imagen: "auto5.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario5",
+                    nombreUsuario: "BestiaMerentiel",
                     textoComentario: "Que buena eleccion, este auto es genial",
                     imagenPerfil: "../images/users/usuario5.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario4",
+                    nombreUsuario: "CrisLema",
                     textoComentario: "Realmente me gusta este modelo.",
                     imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
-                    nombreUsuario: "Usuario3",
+                    nombreUsuario: "EdiCava",
                     textoComentario: "Que buena eleccion, este auto es genial.",
                     imagenPerfil: "../images/users/usuario3.jpg"
                 }
@@ -170,17 +170,17 @@ const lista = {
             imagen: "auto6.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario2",
+                    nombreUsuario: "JavitoGarcia",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
                     imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario5",
+                    nombreUsuario: "BestiaMerentiel",
                     textoComentario: "El mejor auto que he visto en mucho tiempo.",
                     imagenPerfil: "../images/users/usuario5.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario4",
+                    nombreUsuario: "CrisLema",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
                     imagenPerfil: "../images/users/usuario4.png"
                 }
@@ -193,17 +193,17 @@ const lista = {
             imagen: "auto7.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario2",
+                    nombreUsuario: "JavitoGarcia",
                     textoComentario: "Gran auto, definitivamente lo compraria.",
                     imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario1",
+                    nombreUsuario: "PichonAdvincula",
                     textoComentario: "Un auto muy versatil.",
                     imagenPerfil: "../images/users/usuario1.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario5",
+                    nombreUsuario: "BestiaMerentiel",
                     textoComentario: "Gran auto, definitivamente lo compraria.",
                     imagenPerfil: "../images/users/usuario5.jpg"
                 }
@@ -216,17 +216,17 @@ const lista = {
             imagen: "auto8.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario3",
+                    nombreUsuario: "EdiCava",
                     textoComentario: "Es una maravilla, me encanta.",
                     imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario4",
+                    nombreUsuario: "CrisLema",
                     textoComentario: "Este auto cumple con todas mis expectativas.",
                     imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
-                    nombreUsuario: "Usuario5",
+                    nombreUsuario: "BestiaMerentiel",
                     textoComentario: "Excelente auto, definitivamente lo compraria.",
                     imagenPerfil: "../images/users/usuario5.jpg"
                 }
@@ -239,17 +239,17 @@ const lista = {
             imagen: "auto3.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario3",
+                    nombreUsuario: "EdiCava",
                     textoComentario: "Realmente me gusta este modelo.",
                     imagenPerfil: "../images/users/usuario3.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario2",
+                    nombreUsuario: "JavitoGarcia",
                     textoComentario: "Este auto es asombroso!.",
                     imagenPerfil: "../images/users/usuario2.jpg"
                 },
                 {
-                    nombreUsuario: "Usuario2",
+                    nombreUsuario: "JavitoGarcia",
                     textoComentario: "Que buena eleccion, este auto es genial.",
                     imagenPerfil: "../images/users/usuario2.jpg"
                 }
@@ -262,17 +262,17 @@ const lista = {
             imagen: "auto10.jpg",
             comentarios: [
                 {
-                    nombreUsuario: "Usuario4",
+                    nombreUsuario: "CrisLema",
                     textoComentario: "El diseno de este modelo es impresionante.",
                     imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
-                    nombreUsuario: "Usuario4",
+                    nombreUsuario: "CrisLema",
                     textoComentario: "Este auto cumple con todas mis expectativas.",
                     imagenPerfil: "../images/users/usuario4.png"
                 },
                 {
-                    nombreUsuario: "Usuario2",
+                    nombreUsuario: "JavitoGarcia",
                     textoComentario: "Es una maravilla, me encanta.",
                     imagenPerfil: "../images/users/usuario2.jpg"
                 }
