@@ -492,6 +492,68 @@ textarea.form-input {
 }
 
 
+.formulario-registro {
+  background-color: #ffffff; /* Blanco puro */
+  border: 1px solid #ddd;   /* Borde sutil */
+  border-radius: 15px;      /* Bordes redondeados */
+  padding: 25px;
+  max-width: 450px;         /* Ancho máximo */
+  margin: 30px auto;        /* Centrado */
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el título del formulario */
+.formulario-registro h2 {
+  text-align: center;
+  color: #444;  /* Color gris oscuro */
+  font-size: 1.5em; /* Tamaño del título */
+  margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas */
+.formulario-registro label {
+  font-size: 1em;   /* Tamaño de fuente estándar */
+  font-weight: 600; /* Fuente en negrita */
+  color: #666;      /* Color gris más claro */
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Estilo para los campos de entrada */
+.formulario-registro input {
+  width: 100%;      /* Abarca todo el ancho */
+  padding: 12px;    /* Espacio interno */
+  border: 1px solid #ccc; /* Borde sutil */
+  border-radius: 8px;  /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo claro */
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease; /* Efecto en hover */
+}
+
+/* Efecto de hover para campos de entrada */
+.formulario-registro input:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra en hover */
+}
+
+/* Estilo para el botón de envío */
+.formulario-registro button {
+  background-color: #007bff; /* Azul intenso */
+  color: white;              /* Texto blanco */
+  padding: 12px 24px;        /* Espacio interno */
+  border: none;              /* Sin borde */
+  border-radius: 8px;        /* Bordes redondeados */
+  font-size: 1em;            /* Tamaño estándar */
+  font-weight: bold;         /* Fuente en negrita */
+  cursor: pointer;           /* Cursor de puntero */
+  transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto de hover para el botón de envío */
+.formulario-registro button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {
