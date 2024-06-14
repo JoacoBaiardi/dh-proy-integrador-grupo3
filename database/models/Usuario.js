@@ -10,12 +10,13 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         password: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         fecha: {
             type: dataTypes.DATE
         },
-        DNI: {
+        dni: {
             type: dataTypes.INTEGER
         },
         foto: {

@@ -37,8 +37,8 @@ registerStore: function(req, res){
     nuevoUsuario = {
         email: body.email,
         password: body.password,
-        fecha: body.fecha,
-        DNI: body.DNI,
+        fecha: body.fecha_nacimiento,
+        dni: body.nro_documento,
         foto: body.foto
     }
     db.Usuario.create(nuevoUsuario)
