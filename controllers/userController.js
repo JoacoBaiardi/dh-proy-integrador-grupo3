@@ -1,4 +1,5 @@
 const users = require('../db/database.js')
+const db = require('../database/models')
 index = users.usuarios
 const userController = {
 login: function (req,res) {
@@ -30,6 +31,19 @@ profileEdit: function(req, res){
     res.render('profile-edit', {
         title:'Motor Market'
     })
+},
+registerStore: function(req, res){
+    body = req.body
+    nuevoUsuario = {
+        email: body.email,
+        password: body.password,
+        fecha: body.fecha,
+        DNI: body.DNI,
+        foto: body.foto
+    }
+    db.Usuario.create(nuevoUsuario)
+    return res.redirect('/users/login')
+    }
 }
-}
+
 module.exports = userController

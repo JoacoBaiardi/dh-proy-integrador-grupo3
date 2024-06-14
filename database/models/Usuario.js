@@ -31,7 +31,7 @@ module.exports = function (sequelize, dataTypes) {
         },
         deleted_at: {
             type: dataTypes.DATE,
-            allowNull: false
+            allowNull: true
         }
     }
     let config = {
@@ -40,6 +40,16 @@ module.exports = function (sequelize, dataTypes) {
         underscored: true
     };
     const Usuario = sequelize.define(alias, cols, config);
+    Usuario.associate = function (models){
+        Usuario.hasMany(models.Comment, {
+            as: "comentarios",
+            foreignKey: 'usuario_id'
+        }),
+        Usuario.hasMany(models.Product, {
+            as: "producto",
+            foreignKey: 'usuario_id'
+        })
+    }
     return Usuario;
 
 }
