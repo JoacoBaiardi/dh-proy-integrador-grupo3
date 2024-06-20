@@ -48,7 +48,7 @@ registerStore: function(req, res){
         usuario: data.usuario,
         password: data.password,
         fecha: data.fecha,
-        dni: data.dni,
+        dni: data.dni || null,
         foto: data.foto
     };
     db.Usuario.create(usuario)

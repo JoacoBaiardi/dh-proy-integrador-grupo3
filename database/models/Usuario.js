@@ -20,6 +20,7 @@ module.exports = function (sequelize, dataTypes) {
         },
         dni: {
             type: dataTypes.INTEGER,
+            allowNull: true
         },
         foto: {
             type: dataTypes.STRING
