@@ -330,6 +330,9 @@ h3 {
   padding: 15px;
   /* height: 100%; */
 }
+.error-msg{
+  color: red;
+}
 
 .product-detail-title {
   font-weight: 400;
