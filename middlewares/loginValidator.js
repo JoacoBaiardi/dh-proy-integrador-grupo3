@@ -1,7 +1,6 @@
 const { body } = require("express-validator");
 const db = require("../database/models"); //aca tenemos q llamar a la db posta
-const bcryptjs = require('bcryptjs'); // aca no tengo ni idea de cuerno es esto
-
+const bcryptjs = require('bcryptjs'); 
 const loginValidation = [
     body("usuario")
         .notEmpty()
@@ -20,7 +19,7 @@ const loginValidation = [
             })
         }
     ),
-    body("contraseña")
+    body("password")
         .notEmpty()
         .withMessage("Debes Introducir una contraseña")
         .custom(function(value, {req}){
@@ -29,7 +28,7 @@ const loginValidation = [
             })
             .then(function(user){
                 if(user){
-                    const contraseña = user.contraseña;
+                    const contraseña = user.password;
                     const contraseñaOk= bcryptjs.compareSync(value,contraseña);
                     if(!contraseñaOk){
                         throw new Error("Contraseña incorrecta")

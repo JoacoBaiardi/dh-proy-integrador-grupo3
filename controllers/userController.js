@@ -1,11 +1,14 @@
 const users = require('../db/database.js')
 const db = require('../database/models')
 const { validationResult } = require('express-validator')
+const bcrypt = require('bcryptjs')
 
 index = users.usuarios
 const userController = {
 login: function (req,res) {
     res.render('login', {
+        errors:{},
+        oldData:{},
         title: 'MotorMarket'
     })
 },
@@ -46,7 +49,7 @@ registerStore: function(req, res){
     let usuario = {
         email: data.email,
         usuario: data.usuario,
-        password: data.password,
+        password: bcrypt.hashSync(data.password, 10),
         fecha: data.fecha,
         dni: data.dni || null,
         foto: data.foto
@@ -55,7 +58,34 @@ registerStore: function(req, res){
       .then(() => {
         return res.redirect('/users/login');
       })
-        } 
+        },
+    
+    loginStore: function(req, res, next) {
+        let usuario = req.body.usuario;
+        let password = req.body.password;
+
+        let check = {
+            where: { usuario: usuario }
+        };
+
+        db.Usuario.findOne(check)
+        .then(function(result){
+            if(result){
+                let checkPass = bcrypt.compareSync(password, result.password);
+                if(checkPass){
+                    req.session.user = result.dataValues;
+                    if (req.body.recordarme) {
+                        res.cookie("id", result.dataValues.id, { maxAge: 1000 * 60 * 60 });
+                       }
+                       let id = req.session.usuario.id;
+                       return res.redirect(`/users/profile/${id}`);
+                } else{
+                    let errors = { mensaje: "El usuario ingresado no esta registrado" };
+                    return res.render('login', { errors: errors });
+                }
+            }
+        })
+    }
     }
 
 module.exports = userController

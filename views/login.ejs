@@ -15,17 +15,21 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12">
-			<form action="/users/profile" class="formulario-registro" method="GET">
+			<form action="/users/login" class="formulario-registro" method="post">
 				<label for="usuario">Usuario (correo electrónico):</label><br>
-				<input type="email" id="usuario" name="usuario" ><br><br>
+				<input type="email" id="usuario" name="usuario" ><br><% if (locals.errors && errors.usuario) { %> 
+					<div class="error-msg"><%= errors.usuario.msg %></div>
+				<% } %><br>
 				
 				<label for="contraseña">Contraseña:</label><br>
-				<input type="password" id="contraseña" name="contraseña" ><br><br>
+				<input type="password" id="password" name="password" ><br><% if (locals.errors && errors.password) { %> 
+					<div class="error-msg"><%= errors.password.msg %></div>
+				<% } %><br>
 				
 				<input type="checkbox" id="recordarme" name="recordarme">
 				<label for="recordarme">Recordarme</label><br><br>
 				
-				<input type="submit" value="Iniciar sesión">
+				<button type="submit">Iniciar Sesion</button>
 			</form>
 			</h2>
 
