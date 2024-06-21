@@ -7,6 +7,8 @@ index = users.usuarios
 const userController = {
 login: function (req,res) {
     res.render('login', {
+        errors: {},
+        oldData: {},
         title: 'MotorMarket'
     })
 },
@@ -56,6 +58,9 @@ registerStore: function(req, res){
       .then(() => {
         return res.redirect('/users/login');
       })
+      .catch(function (err) {
+        console.log("Error al guardar el usuario", err);
+    });
         },
 loginStore: function(req, res){
     const validationErrors = validationResult(req);
@@ -78,6 +83,11 @@ loginStore: function(req, res){
     .catch( function(e) {
         console.log(e)
     })
+},
+logOut: function(req, res){
+    req.session.destroy();
+    res.clearCookie('userId');
+    return res.redirect('/')
 }
 }
 module.exports = userController

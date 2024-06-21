@@ -26,6 +26,30 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(function(req, res, next){
+  if(req.session.user != undefined){
+    res.locals.user = req.session.user;
+    return next();
+  } 
+  return next();
+});
+
+app.use(function(req, res, next) {
+  if (req.cookies.userId != undefined && req.session.user == undefined) {
+    let cookieId = req.cookies.userId;
+    db.Usuario.findByPk(cookieId)
+    .then(user => {
+      req.session.user = user;
+      res.locals.user = user;
+      return next();
+    })
+    .catch(e => {console.log(e)})
+} else {
+  return next();
+}
+});
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
