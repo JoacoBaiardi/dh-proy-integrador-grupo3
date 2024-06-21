@@ -7,8 +7,6 @@ index = users.usuarios
 const userController = {
 login: function (req,res) {
     res.render('login', {
-        errors:{},
-        oldData:{},
         title: 'MotorMarket'
     })
 },
@@ -59,33 +57,27 @@ registerStore: function(req, res){
         return res.redirect('/users/login');
       })
         },
-    
-    loginStore: function(req, res, next) {
-        let usuario = req.body.usuario;
-        let password = req.body.password;
-
-        let check = {
-            where: { usuario: usuario }
-        };
-
-        db.Usuario.findOne(check)
-        .then(function(result){
-            if(result){
-                let checkPass = bcrypt.compareSync(password, result.password);
-                if(checkPass){
-                    req.session.user = result.dataValues;
-                    if (req.body.recordarme) {
-                        res.cookie("id", result.dataValues.id, { maxAge: 1000 * 60 * 60 });
-                       }
-                       let id = req.session.usuario.id;
-                       return res.redirect(`/users/profile/${id}`);
-                } else{
-                    let errors = { mensaje: "El usuario ingresado no esta registrado" };
-                    return res.render('login', { errors: errors });
-                }
-            }
+loginStore: function(req, res){
+    const validationErrors = validationResult(req);
+    if(!validationErrors.isEmpty()){
+        return res.render("login",{
+            errors: validationErrors.mapped(),
+            oldData:req.body
         })
-    }
-    }
-
+    } 
+    db.Usuario.findOne({
+        where: [{email: req.body.email}]
+    })
+    .then( function ( user ) {
+        req.session.user = user;          
+        if(req.body.rememberme != undefined){
+            res.cookie('userId', user.id, { maxAge: 1000 * 60 * 100})
+        }
+        return res.redirect('/');            
+    })
+    .catch( function(e) {
+        console.log(e)
+    })
+}
+}
 module.exports = userController
