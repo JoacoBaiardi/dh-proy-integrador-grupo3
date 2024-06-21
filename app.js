@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products')
+const session = require('express-session');
 
 var app = express();
 
@@ -19,11 +20,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: "Proyecto",
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
-const session = require('express-session');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -35,12 +40,6 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-app.use(session({
-  secret: "Proyecto",
-  resave: false,
-  saveUninitialized: true
-}));
 
   // render the error page
   res.status(err.status || 500);
