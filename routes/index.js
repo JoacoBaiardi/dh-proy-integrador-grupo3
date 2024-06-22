@@ -4,6 +4,6 @@ var mainController = require('../controllers/mainController')
 
 /* GET home page. */
 router.get('/', mainController.main);
-router.get('/search', mainController.busqueda)
+router.get('/search-results', mainController.busqueda)
 
 module.exports = router;

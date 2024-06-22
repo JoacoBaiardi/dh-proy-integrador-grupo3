@@ -88,6 +88,17 @@ logOut: function(req, res){
     req.session.destroy();
     res.clearCookie('userId');
     return res.redirect('/')
-}
+},
+profileStore: function(req, res){
+    const userId = req.params.id;
+    db.Usuario.findByPk(userId, {
+        include: [
+            { association: 'products'}
+        ]
+    })
+    .catch(function(e){
+        console.log(e)
+    })
+} 
 }
 module.exports = userController

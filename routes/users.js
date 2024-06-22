@@ -8,7 +8,7 @@ var loginValidator = require("../middlewares/loginValidator")
 router.get('/login', userController.login);
 router.post('/login', loginValidator, userController.loginStore)
 router.post('/logout', userController.logOut)
-router.get('/profile', userController.profile)
+router.get('/profile/:id', userController.profileStore)
 router.get('/register', userController.register)
 router.get('/profile-edit', userController.profileEdit)
 router.post('/register', registerValidator, userController.registerStore)
