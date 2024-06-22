@@ -93,9 +93,13 @@ profileStore: function(req, res){
     const userId = req.params.id;
     db.Usuario.findByPk(userId, {
         include: [
-            { association: 'products'}
+            { association: 'products'}, 
+            {association: 'comentarios'}
         ]
     })
+    .then(function (usuario) {
+        res.render('profile', { usuario: usuario, products: usuario.products})
+    })  
     .catch(function(e){
         console.log(e)
     })
