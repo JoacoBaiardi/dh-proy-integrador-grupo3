@@ -4,8 +4,8 @@ const { Op } = db.Sequelize;
 const mainController = {
     main: function (req, res) {
         db.Product.findAll()
-            .then(productos => {
-                res.render('index', { title: 'Motor Market', productos });
+            .then(products => {
+                res.render('index', { title: 'Motor Market', products });
             })
             .catch(error => {
                 console.error('Error al obtener productos:', error);
@@ -26,7 +26,7 @@ const mainController = {
 
         db.Product.findAll(filtro_busqueda)
             .then(results => {
-                return res.render('search-results', { titulo: `Resultados: ${search}`, productos: results });
+                return res.render('search-results', { titulo: `Resultados: ${search}`, products: results });
             })
             .catch(error => {
                 console.error('Error al realizar la búsqueda:', error);
