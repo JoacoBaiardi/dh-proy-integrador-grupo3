@@ -21,7 +21,10 @@ const mainController = {
                     { producto: { [Op.like]: `%${search}%` } },
                     { descripcion: { [Op.like]: `%${search}%` } }
                 ]
-            }
+            },
+            order: [
+                ["created_at", "DESC"]
+            ]
         };
 
         db.Product.findAll(filtro_busqueda)

@@ -45,11 +45,11 @@
 						<h2 class="products-title">Mis productos</h2>
 					</div>
 					<!-- Show mis productos -->
-					<% if (products && usuario.products.length > 0) { %> <!-- Verificación agregada -->
+					<% if (products && usuario.products.length > 0) { %>
 						<% for (let i = 0; i < usuario.products.length && i < 4; i++) { %>
 							<div class="col-12 col-sm-6 col-lg-3">
 								<section class="product-box">
-									<a href="/product/detail">
+									<a href="/product/detail/<%=usuario.products[i].id%>">
 										<figure class="product-box_image">
 											<img class="imgIndex" src="<%= usuario.products[i].foto%>" alt="<%= usuario.products[i].producto %>">
 										</figure>
@@ -61,9 +61,9 @@
 								</section>
 							</div>
 						<% } %>
-					<% } else { %> <!-- Mensaje alternativo si no hay productos -->
+					<% } else { %>
 						<div class="col-12">
-							<p class="no-products-message">No hay productos disponibles</p>
+							<p class="no-products-message">No tienes productos en tu perfil</p>
 						</div>
 					<% } %>
 			</div>
