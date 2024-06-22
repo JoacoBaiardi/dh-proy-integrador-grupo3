@@ -26,6 +26,7 @@ const mainController = {
 
         db.Product.findAll(filtro_busqueda)
             .then(results => {
+                console.log(results)
                 return res.render('search-results', { titulo: `Resultados: ${search}`, products: results });
             })
             .catch(error => {

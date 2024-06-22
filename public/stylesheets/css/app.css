@@ -557,6 +557,16 @@ textarea.form-input {
   background-color: #0056b3; /* Azul más oscuro */
 }
 
+.no-results {
+  text-align: center;
+  margin: 20px 0;
+  padding: 40px;
+  background-color: var(--light-gray); 
+  border: 2px solid var(--gray); 
+  color: var(--dark-blue); 
+  font-size: 2rem; 
+  font-weight: bold; 
+}
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {
