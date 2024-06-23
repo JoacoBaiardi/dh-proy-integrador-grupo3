@@ -28,9 +28,13 @@
 						</div>
 						<div>
 							<ul class="">
-								<li><%= usuario.products.length %> productos guardados</li>
+								<li>
+									<%= usuario.products.length %> productos guardados
+								</li>
 								<li>200 seguidores</li>
-								<li><%=usuario.comentarios.length%> comentarios</li>
+								<li>
+									<%=usuario.comentarios.length%> comentarios
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -45,30 +49,37 @@
 						<h2 class="products-title">Mis productos</h2>
 					</div>
 					<!-- Show mis productos -->
-					<% if (products && usuario.products.length > 0) { %>
-						<% for (let i = 0; i < usuario.products.length && i < 4; i++) { %>
+					<% if (usuario.products && usuario.products.length> 0) { %>
+						<% usuario.products.forEach(product=> { %>
 							<div class="col-12 col-sm-6 col-lg-3">
 								<section class="product-box">
-									<a href="/product/detail/<%=usuario.products[i].id%>">
+									<a href="/products/detail/<%= product.id %>">
 										<figure class="product-box_image">
-											<img class="imgIndex" src="<%= usuario.products[i].foto%>" alt="<%= usuario.products[i].producto %>">
+											<img class="imgIndex" src="<%= product.foto %>"
+												alt="<%= product.producto %>">
 										</figure>
 										<article class="product-box_data">
-											<h2 class="prompt-semibold"><%= usuario.products[i].usuario %></h2>
-											<p class="prompt-light">Comentarios: <%= products[i].comentarios ? products[i].comentarios.length : 0 %></p>
+											<h2 class="prompt-semibold">
+												<%= product.producto %>
+											</h2>
+											<p class="prompt-light"><%= product.descripcion %>
+											</p>
+											<p class="prompt-light">Comentarios: <%= product.comentarios ?
+													product.comentarios.length : 0 %>
+											</p>
 										</article>
 									</a>
 								</section>
 							</div>
-						<% } %>
-					<% } else { %>
-						<div class="col-12">
-							<p class="no-products-message">No tienes productos en tu perfil</p>
-						</div>
-					<% } %>
+							<% }); %>
+								<% } else { %>
+									<div class="col-12">
+										<p class="no-products-message">No tienes productos en tu perfil</p>
+									</div>
+									<% } %>
+				</div>
 			</div>
 			<!-- /Mis productos -->
-
 
 			<!-- footer -->
 			<%- include('./partials/footer') %>

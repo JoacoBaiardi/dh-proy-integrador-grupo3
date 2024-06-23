@@ -1,73 +1,88 @@
 <!-- Include Head -->
 <%- include('./partials/head') %>
 
-<body>
-	<!-- Header -->
-	<%- include('./partials/header') %>
-	<!-- /Header -->
-	
-	<!-- Banner -->
-	<div class="banner">
-		<img src="images/img-home-banner.jpg" alt="Banner de ofertas">
-	</div>
-	<!-- /Banner -->
+	<body>
+		<!-- Header -->
+		<%- include('./partials/header') %>
+			<!-- /Header -->
 
-	<!-- Novedades -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title" id="news">Novedades</h2>
+			<!-- Banner -->
+			<div class="banner">
+				<img src="images/img-home-banner.jpg" alt="Banner de ofertas">
 			</div>
-			<!-- Show the "ultimos" products -->
-			<% for (let i = 0; i < products.length && i < 8; i++) { %>
-				<div class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
-						<a href="/products/detail/<%=products[i].id%>">
-							<figure class="product-box_image">
-								<img class="imgIndex" src="<%= products[i].foto %>" alt="<%= products[i].producto %>">
-							</figure>
-							<article class="product-box_data">
-								<h2 class="prompt-semibold"><%= products[i].producto %></h2>
-								<p class="prompt-light"><%= products[i].descripcion %></p>
-								<p class="prompt-light">Comentarios: <%= indProd[i].comentarios.length %></p>
-							</article>
-						</a>
-					</section>
+			<!-- /Banner -->
+
+			<!-- Novedades -->
+			<div class="container products-wrapper">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="products-title" id="news">Novedades</h2>
+					</div>
+					<!-- Show the "ultimos" products -->
+					<% for (let i=0; i < products.length && i < 4; i++) { %>
+						<div class="col-12 col-sm-6 col-lg-3">
+							<section class="product-box">
+								<a href="/products/detail/<%=products[i].id%>">
+									<figure class="product-box_image">
+										<img class="imgIndex" src="<%= products[i].foto %>"
+											alt="<%= products[i].producto %>">
+									</figure>
+									<article class="product-box_data">
+										<h2 class="prompt-semibold">
+											<%= products[i].producto %>
+										</h2>
+										<p class="prompt-light">
+											<%= products[i].descripcion %>
+										</p>
+										<p class="prompt-light">Comentarios: <%= products[i].comentarios ?
+												products[i].comentarios.length : 0 %>
+										</p>
+									</article>
+								</a>
+							</section>
+						</div>
+						<% } %>
 				</div>
-			<% } %>
-		</div>
-	</div>
-	<!-- /Novedades -->
-	<!-- Más comentados -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Más comentados</h2>
 			</div>
-			<!-- Show the "ultimos" products -->
-			<% for (let i = 0; i < products.length && i < 8; i++) { %>
-				<div class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
-						<a href="./products/detail/<%=products[i].id%>">
-							<figure class="product-box_image">
-								<img class="imgIndex" src="<%= products[i].foto %>" alt="<%= products[i].producto %>">
-							</figure>
-							<article class="product-box_data">
-								<h2 class="prompt-semibold"><%= products[i].producto %></h2>
-								<p class="prompt-light"><%= products[i].descripcion %></p>
-								<p class="prompt-light">Comentarios: <%= indProd[i].comentarios.length %></p>
-							</article>
-						</a>
-					</section>
+			<!-- /Novedades -->
+			<!-- Más comentados -->
+			<div class="container products-wrapper">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="products-title">Más comentados</h2>
+					</div>
+					<!-- Show the "ultimos" products -->
+					<% for (let i=0; i < products.length && i < 8; i++) { %>
+						<div class="col-12 col-sm-6 col-lg-3">
+							<section class="product-box">
+								<a href="./products/detail/<%=products[i].id%>">
+									<figure class="product-box_image">
+										<img class="imgIndex" src="<%= products[i].foto %>"
+											alt="<%= products[i].producto %>">
+									</figure>
+									<article class="product-box_data">
+										<h2 class="prompt-semibold">
+											<%= products[i].producto %>
+										</h2>
+										<p class="prompt-light">
+											<%= products[i].descripcion %>
+										</p>
+										<p class="prompt-light">Comentarios: <%= products[i].comentarios ?
+												products[i].comentarios.length : 0 %>
+										</p>
+									</article>
+								</a>
+							</section>
+						</div>
+						<% } %>
 				</div>
-			<% } %>
-		</div>
-	</div>
-	<!-- /Más comentados -->
+			</div>
+			<!-- /Más comentados -->
 
 
-	<!-- footer -->
-	<%- include('./partials/footer') %>
-	<!-- /footer -->
-</body>	
-</html>
+			<!-- footer -->
+			<%- include('./partials/footer') %>
+				<!-- /footer -->
+	</body>
+
+	</html>
