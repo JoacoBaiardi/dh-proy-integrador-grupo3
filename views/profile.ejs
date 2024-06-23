@@ -55,7 +55,7 @@
 										</figure>
 										<article class="product-box_data">
 											<h2 class="prompt-semibold"><%= usuario.products[i].usuario %></h2>
-											<p class="prompt-light">Comentarios: <%= usuario.products[i].comentarios.length %></p>
+											<p class="prompt-light">Comentarios: <%= products[i].comentarios ? products[i].comentarios.length : 0 %></p>
 										</article>
 									</a>
 								</section>
