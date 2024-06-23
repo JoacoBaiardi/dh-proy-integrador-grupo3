@@ -36,7 +36,7 @@ const productsController = {
 
     prodAdd: function (req, res) {
         if (req.session.user == undefined) {
-            return res.redirect('/register');
+            return res.redirect('/users/login');
         } else {
             return res.render('product-add');
         }
@@ -58,15 +58,15 @@ const productsController = {
             usuario_id: req.session.user.id
         }
         db.Product.create(product)
-        .then((productCreado) => {
-            console.log('Producto creado:', productCreado);
-            return res.redirect('/');
-        })
-        .catch(error => {
-            console.log(error);
-            return res.render('product-add', { dbError: 'Error al guardar el producto', oldData: req.body });
-        });
-    }
+            .then((productCreado) => {
+                console.log('Producto creado:', productCreado);
+                return res.redirect('/');
+            })
+            .catch(error => {
+                console.log(error);
+                return res.render('product-add', { dbError: 'Error al guardar el producto', oldData: req.body });
+            });
+    },
 }
 
 module.exports = productsController
