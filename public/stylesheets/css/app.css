@@ -580,6 +580,61 @@ textarea.form-input {
 }
 
 
+.messsage {
+  margin-top: 20px;
+  padding: 10px 15px; /* Ajuste del padding para hacerlo más compacto */
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px; /* Reducción del ancho máximo */
+  margin-left: auto; /* Centrar el mensaje */
+  margin-right: auto; /* Centrar el mensaje */
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  color: #6c757d; /* Color de texto */
+  line-height: 1.4; /* Espaciado de línea ajustado */
+}
+
+/* Estilo específico para el mensaje enlace */
+.messsage a {
+  text-decoration: none; /* Quitar subrayado del enlace */
+  color: #666; /* Color azul para el enlace */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.buy-now-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.buy-now-button:hover {
+  background-color: #0056b3;
+}
+
+.buy-now-button:active {
+  background-color: #0056b3;
+  transform: translateY(1px);
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {

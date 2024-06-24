@@ -25,8 +25,8 @@ const productsController = {
 
                 console.log('Producto encontrado:', producto.toJSON());
                 let lista_comentarios = producto.comentarios.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-
-                res.render('product', { producto, lista_comentarios });
+                const user = req.session.user || null;
+                res.render('product', { producto, lista_comentarios, user });
             })
             .catch((error) => {
                 console.error(error);
@@ -117,6 +117,28 @@ const productsController = {
             .catch(error => {
                 console.error('Error al obtener el producto:', error);
                 res.status(500).send('Error interno del servidor');
+            });
+    },
+    addComment: function (req, res) {
+        const userId = req.session.user.id;
+        const productId = req.params.id;
+        const texto = req.body.texto.trim();
+        const user = req.session.user
+        if (!texto) {
+            return res.status(400).send("El texto del comentario no puede estar vacío.");
+        }
+        const newComment = {
+            texto: texto,
+            usuario_id: userId,
+            producto_id: productId
+        };
+        db.Comment.create(newComment)
+            .then(function (newComment) {
+                return res.redirect(`/products/detail/${productId}`);
+            })
+            .catch(function (e) {
+                console.log("Error al guardar", e);
+                return res.status(500).send("Error al guardar el comentario.");
             });
     }
 }

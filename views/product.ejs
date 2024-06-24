@@ -2,58 +2,79 @@
 <html lang="es">
 <!-- Include Head -->
 <%- include('./partials/head') %>
-<body>
-	<!-- Header -->
-	<%- include('./partials/header') %>
-	<!-- /Header -->
 
-	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= producto.producto %></h2>
-			<p class="product-detail-description">
-				<a href="/products/edit/<%= producto.id %>">Editar</a>
-			</p>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="/images/products/<%= producto.foto %>" alt="" class="product-detail-img">
+	<body>
+		<!-- Header -->
+		<%- include('./partials/header') %>
+			<!-- /Header -->
+
+			<!-- product detail -->
+			<div class="container products-wrapper">
+				<div class="d-flex align-items-center">
+					<h2 class="products-title">
+						<%= producto.producto %>
+					</h2>
 					<p class="product-detail-description">
-						<%= producto.descripcion %>
-				</article>
-				<div class="col-12 col-lg-4">
-					<% for (let i = 0; i < producto.comentarios.length; i++) { %>
-						<section class="comments">
-							<article>
-								<% if (producto.comentarios[i].usuarios.foto) { %>
-									<img src="../images/users/<%= producto.comentarios[i].usuarios.foto %>" alt="Foto de perfil" class="foto-perfil">
-									<% } else { %>
-										<img src="/images/placeholder.jpg" alt="Foto de perfil genérica" class="foto-perfil">
-										<% } %>
-								<div class="data">
-									<p class="user">
-										<strong><a href="/users/profile/<%=producto.comentarios[i].usuarios.id%>"><%= producto.comentarios[i].usuarios.usuario %></a></strong>
-										<%= producto.comentarios[i].texto %>
-									</p>
-								</div>
-							</article>
-						</section>
-					<% } %>
-					<form class="form" action="" method="GET">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
+						<a href="/products/edit/<%= producto.id %>">Editar</a>
+					</p>
+				</div>
+				<div class="product-detail">
+					<div class="row">
+						<article class="col-12 col-lg-8 product-detail-info">
+							<img src="/images/products/<%= producto.foto %>" alt="" class="product-detail-img">
+							<p class="product-detail-description">
+								<%= producto.descripcion %>
+							</p>
+						</article>
+						<div class="col-12 col-lg-4">
+							<% if (producto.comentarios.length> 0) { %>
+								<h3>Comentarios</h3>
+								<% producto.comentarios.forEach(comment=> { %>
+									<section class="comments">
+										<article>
+											<% if (comment.usuarios && comment.usuarios.foto) { %>
+												<img src="/images/users/<%= comment.usuarios.foto %>"
+													alt="Foto de perfil" class="foto-perfil">
+												<% } else { %>
+													<img src="/images/placeholder.jpg" alt="Foto de perfil genérica"
+														class="foto-perfil">
+													<% } %>
+														<div class="data">
+															<p class="user">
+																<strong><a
+																		href="/users/profile/<%= comment.usuarios.id %>">
+																		<%= comment.usuarios.usuario %>
+																	</a></strong>
+																<%= comment.texto %>
+															</p>
+														</div>
+										</article>
+									</section>
+									<% }); %>
+										<% } else { %>
+											<p class="messsage">No hay comentarios aún.</p>
+											<% } %>
+											<div class="messsage">
+												<% if (user) { %>
+													<form class="form" action="/products/comments/<%= producto.id %>" method="POST">
+														<input class="form-input" type="text" name="texto" placeholder="Agregar comentario">
+														<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+													</form>
+												<% } else { %>
+													<p>Debes <a href="/users/login">iniciar sesión</a> para comentar.</p>
+												<% } %>
+											</div>
+
+							<hr>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- /product detail -->
+			</div>
 
-	<!-- footer -->
-	<%- include('./partials/footer') %>
-	<!-- /footer -->
+			<!-- footer -->
+			<%- include('./partials/footer') %>
+				<!-- /footer -->
 
-</body>	
+	</body>
+
 </html>

@@ -10,5 +10,6 @@ router.get('/add', productsController.prodAdd)
 router.post ("/productAdd", addValidator, productsController.saveProd) 
 router.get('/edit/:id', addValidator, productsController.editProd)
 router.post('/edit/:id', addValidator, productsController.subProd)
+router.post('/comments/:id', productsController.addComment)
 
 module.exports = router;
