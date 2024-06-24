@@ -26,10 +26,14 @@
 					<% for (let i = 0; i < producto.comentarios.length; i++) { %>
 						<section class="comments">
 							<article>
-								<img src="<%= producto.comentarios[i].usuarios.foto %>" alt="">
+								<% if (producto.comentarios[i].usuarios.foto) { %>
+									<img src="../images/users/<%= producto.comentarios[i].usuarios.foto %>" alt="Foto de perfil" class="foto-perfil">
+									<% } else { %>
+										<img src="/images/placeholder.jpg" alt="Foto de perfil genérica" class="foto-perfil">
+										<% } %>
 								<div class="data">
 									<p class="user">
-										<strong><a href="/users/profile"><%= producto.comentarios[i].usuarios.usuario %></a></strong>
+										<strong><a href="/users/profile/<%=producto.comentarios[i].usuarios.id%>"><%= producto.comentarios[i].usuarios.usuario %></a></strong>
 										<%= producto.comentarios[i].texto %>
 									</p>
 								</div>

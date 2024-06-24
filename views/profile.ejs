@@ -3,7 +3,7 @@
 
 	<body>
 		<!-- Header -->
-		<%- include('./partials/headerLogueado') %>
+		<%- include('./partials/header') %>
 			<!-- /Header -->
 
 			<!-- Datos del usuario -->
@@ -20,7 +20,7 @@
 						<div class="d-flex align-items-center ">
 							<h1 class="main-title">
 								<%= usuario.usuario %>
-									<a href="/users/profile-edit">
+									<a href="/users/profile-edit/<%=usuario.id%>">
 										<i class="fas fa-cog"></i>
 									</a>
 							</h1>

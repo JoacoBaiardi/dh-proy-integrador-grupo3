@@ -3,42 +3,92 @@
 <!-- Include Head -->
 <%- include('./partials/head') %>
 
-<body>
-	<!-- Header -->
-	<%- include('./partials/header') %>
-	<!-- /Header -->
+	<body>
+		<!-- Header -->
+		<%- include('./partials/header') %>
+			<!-- /Header -->
 
-	<!-- Novedades -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Editar mi perfil</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <form action="/users/profile" class="formulario-registro" method="GET">
-				<label for="email">Email:</label><br>
-				<input type="email" id="email" name="email" ><br><br>
-				
-				<label for="usuario">Usuario:</label><br>
-				<input type="text" id="usuario" name="usuario" ><br><br>
-				
-				<label for="contraseña">Contraseña:</label><br>
-				<input type="password" id="contraseña" name="contraseña" ><br><br>
-				
-				<label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
-				<input type="date" id="fecha_nacimiento" name="fecha_nacimiento" ><br><br>
-				
-				<label for="nro_documento">Número de Documento:</label><br>
-				<input type="number" id="nro_documento" name="nro_documento" ><br><br>
-				
-				<input type="submit" value="Confirmar Edicion">
-			</form>
-			</h2>
+			<!-- Novedades -->
+			<div class="container products-wrapper">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="products-title">Editar mi perfil</h2>
+					</div>
+					<!-- Show the "ultimos" products -->
+					<h2 class="col-12">
+						<form action="/users/profile-edit/<%= usuario.id %>" method="POST" class="formulario-registro">
+
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" value="<%= usuario.email %>">
+
+							<% if (errors && errors.email) { %>
+								<p>
+									<%= errors.email.msg %>
+								</p>
+								<% } %>
+
+									<label for="password">Nueva Contraseña</label>
+									<input type="password" id="password" name="password">
+
+									<% if (errors && errors.password) { %>
+										<p>
+											<%= errors.password.msg %>
+										</p>
+										<% } %>
 
 
-	<!-- footer -->
-	<%- include('./partials/footer') %>
-	<!-- /footer -->
-</body>
+											<label for="usuario">Usuario</label>
+											<input type="text" id="usuario" name="usuario"
+												value="<%= usuario.usuario %>">
+
+											<% if (errors && errors.usuario) { %>
+												<p>
+													<%= errors.usuario.msg %>
+												</p>
+												<% } %>
+
+
+													<label for="fecha">Fecha de Nacimiento</label>
+													<input type="date" id="fecha" name="fecha"
+														value="<%= usuario.fecha %>">
+
+													<% if (errors && errors.fecha) { %>
+														<p>
+															<%= errors.fecha.msg %>
+														</p>
+														<% } %>
+
+
+															<label for="dni">DNI</label>
+															<input type="text" id="dni" name="dni"
+																value="<%= usuario.dni %>">
+
+															<% if (errors && errors.dni) { %>
+																<p>
+																	<%= errors.dni.msg %>
+																</p>
+																<% } %>
+
+																	<label for="foto">Foto de Perfil</label>
+																	<input type="text" id="foto" name="foto"
+																		value="<%= usuario.foto %>">
+
+																	<% if (errors && errors.foto) { %>
+																		<p>
+																			<%= errors.foto.msg %>
+																		</p>
+																		<% } %>
+
+
+																			<button type="submit">Guardar
+																				Cambios</button>
+						</form>
+					</h2>
+
+
+					<!-- footer -->
+					<%- include('./partials/footer') %>
+						<!-- /footer -->
+	</body>
 
 </html>
