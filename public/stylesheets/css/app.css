@@ -10,7 +10,7 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Titillium Web', sans-serif; 
+  --base-font-family: 'Titillium Web', sans-serif;
 }
 
 
@@ -69,7 +69,7 @@ h1,
 h3 {
   font-family: "Mulish", sans-serif;
 }
-  
+
 #news {
   color: var(--light-gray);
 }
@@ -78,7 +78,7 @@ h3 {
 .main-header {
   padding: 15px 0;
   background-color: #ffffff;
-  box-shadow: 2px  var(--gray);
+  box-shadow: 2px var(--gray);
 }
 
 .main-header_home-link,
@@ -141,14 +141,14 @@ h3 {
   font-size: 1.5em;
 }
 
-.logout{
+.logout {
   background: transparent;
   border: 0px;
   cursor: pointer;
   font-size: 1em;
 }
 
-.logout:hover{
+.logout:hover {
   color: #1259c3;
 }
 
@@ -199,7 +199,7 @@ h3 {
   border-bottom: 1px solid var(--light-gray);
 }
 
-.product-box_image img{
+.product-box_image img {
   height: 150px;
 }
 
@@ -276,7 +276,7 @@ h3 {
   background-color: #ffffff;
   padding: 20px 0;
   margin-top: 80px;
-  box-shadow: 2px  var(--gray);
+  box-shadow: 2px var(--gray);
 }
 
 .footer-data {
@@ -308,7 +308,7 @@ h3 {
 .sub-footer p {
   margin: 0;
   color: var(--gray);
-  padding: 15px 0;
+  padding: 15px 0;
 }
 
 
@@ -330,7 +330,8 @@ h3 {
   padding: 15px;
   /* height: 100%; */
 }
-.error-msg{
+
+.error-msg {
   color: red;
 }
 
@@ -349,11 +350,13 @@ h3 {
   font-size: 5.5em;
   margin: 10px 0;
 }
-.product-detail .form{
+
+.product-detail .form {
   padding: 0 15px;
   display: flex;
   flex-direction: column;
 }
+
 .small {
   font-size: 1.8em;
   color: var(--green);
@@ -411,33 +414,40 @@ h3 {
 .action-button.edit {
   background-color: chocolate;
 }
+
 .action-button.delete {
   background-color: rgb(248, 69, 37);
 }
+
 .comments {
   padding: 30px 15px 15px 0;
 }
-.comments article{
+
+.comments article {
   margin-bottom: 7.5px;
   padding-bottom: 7.5px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
   justify-content: space-between;
 }
-.comments img{
+
+.comments img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-.comments .data{
+
+.comments .data {
   width: 85%;
-  
+
 }
-.comments p{
+
+.comments p {
   font-size: 1.5em;
   margin-top: 0;
 }
-.comments .user{
+
+.comments .user {
   font-size: 1.7em;
 }
 
@@ -460,7 +470,7 @@ h3 {
   padding: 0 15px;
 }
 
-.error{
+.error {
   color: rgb(209, 0, 0);
   font-size: 1.4em;
 }
@@ -472,22 +482,22 @@ textarea.form-input {
 }
 
 /*====== Profile ======*/
-.info-usuario{
+.info-usuario {
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
   font-size: 16px;
 }
 
-.foto-perfil{
+.foto-perfil {
   border-radius: 50%;
 }
 
-.main-title{
+.main-title {
   font-size: 25px;
   margin-bottom: 10px;
 }
 
-.btn{
+.btn {
   background-color: #1259c3;
   padding: 10px 20px;
   border-radius: 4px;
@@ -496,110 +506,144 @@ textarea.form-input {
 
 
 .formulario-registro {
-  background-color: #ffffff; /* Blanco puro */
-  border: 1px solid #ddd;   /* Borde sutil */
-  border-radius: 15px;      /* Bordes redondeados */
+  background-color: #ffffff;
+  /* Blanco puro */
+  border: 1px solid #ddd;
+  /* Borde sutil */
+  border-radius: 15px;
+  /* Bordes redondeados */
   padding: 25px;
-  max-width: 450px;         /* Ancho máximo */
-  margin: 30px auto;        /* Centrado */
-  font-family: 'Roboto', sans-serif; /* Fuente moderna */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 450px;
+  /* Ancho máximo */
+  margin: 30px auto;
+  /* Centrado */
+  font-family: 'Roboto', sans-serif;
+  /* Fuente moderna */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
 }
 
 /* Estilo para el título del formulario */
 .formulario-registro h2 {
   text-align: center;
-  color: #444;  /* Color gris oscuro */
-  font-size: 1.5em; /* Tamaño del título */
+  color: #444;
+  /* Color gris oscuro */
+  font-size: 1.5em;
+  /* Tamaño del título */
   margin-bottom: 20px;
 }
 
 /* Estilo para las etiquetas */
 .formulario-registro label {
-  font-size: 1em;   /* Tamaño de fuente estándar */
-  font-weight: 600; /* Fuente en negrita */
-  color: #666;      /* Color gris más claro */
+  font-size: 1em;
+  /* Tamaño de fuente estándar */
+  font-weight: 600;
+  /* Fuente en negrita */
+  color: #666;
+  /* Color gris más claro */
   margin-bottom: 8px;
   display: block;
 }
 
 /* Estilo para los campos de entrada */
 .formulario-registro input {
-  width: 100%;      /* Abarca todo el ancho */
-  padding: 12px;    /* Espacio interno */
-  border: 1px solid #ccc; /* Borde sutil */
-  border-radius: 8px;  /* Bordes redondeados */
-  background-color: #f9f9f9; /* Fondo claro */
+  width: 100%;
+  /* Abarca todo el ancho */
+  padding: 12px;
+  /* Espacio interno */
+  border: 1px solid #ccc;
+  /* Borde sutil */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  background-color: #f9f9f9;
+  /* Fondo claro */
   margin-bottom: 15px;
-  transition: box-shadow 0.3s ease; /* Efecto en hover */
+  transition: box-shadow 0.3s ease;
+  /* Efecto en hover */
 }
 
 /* Efecto de hover para campos de entrada */
 .formulario-registro input:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra en hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Sombra en hover */
 }
 
 /* Estilo para el botón de envío */
 .formulario-registro button {
-  background-color: #007bff; /* Azul intenso */
-  color: white;              /* Texto blanco */
-  padding: 12px 24px;        /* Espacio interno */
-  border: none;              /* Sin borde */
-  border-radius: 8px;        /* Bordes redondeados */
-  font-size: 1em;            /* Tamaño estándar */
-  font-weight: bold;         /* Fuente en negrita */
-  cursor: pointer;           /* Cursor de puntero */
-  transition: background-color 0.3s ease; /* Efecto de transición */
+  background-color: #007bff;
+  /* Azul intenso */
+  color: white;
+  /* Texto blanco */
+  padding: 12px 24px;
+  /* Espacio interno */
+  border: none;
+  /* Sin borde */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  font-size: 1em;
+  /* Tamaño estándar */
+  font-weight: bold;
+  /* Fuente en negrita */
+  cursor: pointer;
+  /* Cursor de puntero */
+  transition: background-color 0.3s ease;
+  /* Efecto de transición */
 }
 
 /* Efecto de hover para el botón de envío */
 .formulario-registro button:hover {
-  background-color: #0056b3; /* Azul más oscuro */
+  background-color: #0056b3;
+  /* Azul más oscuro */
 }
 
 .no-results {
   text-align: center;
   margin: 20px 0;
   padding: 40px;
-  background-color: var(--light-gray); 
-  border: 2px solid var(--gray); 
-  color: var(--dark-blue); 
-  font-size: 2rem; 
-  font-weight: bold; 
+  background-color: var(--light-gray);
+  border: 2px solid var(--gray);
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .no-products-message {
   text-align: center;
   margin-top: 20px;
   padding: 15px;
-  background-color: #f2f2f2; 
-  color: #333; 
-  border: 1px solid #ccc; 
+  background-color: #f2f2f2;
+  color: #333;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 
 .messsage {
   margin-top: 20px;
-  padding: 10px 15px; /* Ajuste del padding para hacerlo más compacto */
+  padding: 10px 15px;
+  /* Ajuste del padding para hacerlo más compacto */
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
   border-radius: 8px;
   text-align: center;
-  max-width: 300px; /* Reducción del ancho máximo */
-  margin-left: auto; /* Centrar el mensaje */
-  margin-right: auto; /* Centrar el mensaje */
-  font-size: 14px; /* Tamaño de fuente más pequeño */
-  color: #6c757d; /* Color de texto */
-  line-height: 1.4; /* Espaciado de línea ajustado */
+  max-width: 300px;
+  /* Reducción del ancho máximo */
+  margin-left: auto;
+  /* Centrar el mensaje */
+  margin-right: auto;
+  /* Centrar el mensaje */
+  font-size: 14px;
+  /* Tamaño de fuente más pequeño */
+  color: #6c757d;
+  /* Color de texto */
+  line-height: 1.4;
 }
 
-/* Estilo específico para el mensaje enlace */
 .messsage a {
-  text-decoration: none; /* Quitar subrayado del enlace */
-  color: #666; /* Color azul para el enlace */
-  font-weight: bold; /* Texto en negrita */
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
 }
 
 .buy-now-button {
@@ -642,7 +686,7 @@ textarea.form-input {
 }
 
 .creator-link {
-  color: #666; /* Color azul, puedes cambiarlo según tu paleta de colores */
+  color: #666;
   text-decoration: none;
   font-weight: bold;
 }
@@ -672,7 +716,7 @@ textarea.form-input {
     margin-top: 0;
     text-align: right;
   }
-  
+
   .banner {
     height: 320px;
     background: linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);

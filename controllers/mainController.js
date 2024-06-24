@@ -4,8 +4,8 @@ const { Op } = db.Sequelize;
 const mainController = {
     main: function (req, res) {
         db.Product.findAll({
-            order: [['created_at', 'DESC']], 
-            limit: 4, 
+            order: [['created_at', 'DESC']],
+            limit: 4,
             include: [
                 { model: db.Comment, as: 'comentarios' }
             ]
@@ -14,8 +14,8 @@ const mainController = {
                 res.render('index', { title: 'Motor Market', products });
             })
             .catch(error => {
-                console.error('Error al obtener productos:', error);
-                res.status(500).send('Error interno del servidor');
+                console.log(error);
+                res.send('Error interno');
             });
     },
 
@@ -42,8 +42,8 @@ const mainController = {
                 return res.render('search-results', { titulo: `Resultados: ${search}`, products: results });
             })
             .catch(error => {
-                console.error('Error al realizar la búsqueda:', error);
-                res.status(500).send('Error interno del servidor');
+                console.log(error);
+                res.send('Error interno');
             });
     }
 };

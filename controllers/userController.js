@@ -1,9 +1,7 @@
-const users = require('../db/database.js')
 const db = require('../database/models')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 
-index = users.usuarios
 const userController = {
     login: function (req, res) {
         res.render('login', {
@@ -28,7 +26,7 @@ const userController = {
         })
     },
     register: function (req, res) {
-        
+
         res.render('register', {
             errors: {},
             oldData: {},
@@ -43,7 +41,7 @@ const userController = {
     registerStore: function (req, res) {
         let errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.status(400).render('register', { errors: errors.mapped(), oldData: req.body });
+            return res.render('register', { errors: errors.mapped(), oldData: req.body });
         }
         let data = req.body;
         console.log(data)
@@ -60,7 +58,7 @@ const userController = {
                 return res.redirect('/users/login');
             })
             .catch(function (err) {
-                console.log("Error al guardar el usuario", err);
+                console.log(err);
             });
     },
     loginStore: function (req, res) {
@@ -110,7 +108,7 @@ const userController = {
         if (req.session.user.id.toString() !== usuarioId) {
             return res.status(403).send('Acceso no autorizado');
         }
-        
+
         db.Usuario.findByPk(usuarioId)
             .then(function (usuario) {
                 if (!usuario) {
@@ -120,21 +118,21 @@ const userController = {
             })
             .catch(function (e) {
                 console.log(e);
-                res.status(500).send('Error al cargar el perfil');
+                res.send('Error al cargar el perfil');
             });
     },
 
     updateProfile: function (req, res) {
         const usuarioId = req.params.id;
         const validationErrors = validationResult(req);
-        
-    console.log('req.session.user.id:', req.session.user.id);
-    console.log('usuarioId:', usuarioId);
+
+        console.log('req.session.user.id:', req.session.user.id);
+        console.log('usuarioId:', usuarioId);
 
         if (req.session.user.id.toString() !== usuarioId) {
-            return res.status(403).send('Acceso no autorizado');
+            return res.send('Acceso no autorizado');
         }
-        
+
 
         const usuario = {
             email: req.body.email,
@@ -156,7 +154,7 @@ const userController = {
 
         if (!validationErrors.isEmpty()) {
             return res.render("profile-edit", {
-               errors: validationErrors.mapped(),
+                errors: validationErrors.mapped(),
                 oldData: req.body,
                 usuario: usuario
             });
@@ -168,8 +166,8 @@ const userController = {
                 res.redirect(`/users/profile/${usuarioId}`);
             })
             .catch((err) => {
-                console.error('Error al guardar el usuario', err);
-                res.status(500).send('Error al guardar el usuario');
+                console.log(err);
+                res.send('Error al guardar el usuario');
             });
     }
 }

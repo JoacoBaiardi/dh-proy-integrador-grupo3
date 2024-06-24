@@ -3,42 +3,48 @@
 <!-- Include Head -->
 <%- include('./partials/head') %>
 
-<body>
-	<!-- Header -->
-	<%- include('./partials/header') %>
-	<!-- /Header -->
+	<body>
+		<!-- Header -->
+		<%- include('./partials/header') %>
+			<!-- /Header -->
 
-	<!-- Novedades -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Resultados de búsqueda</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<% if (products && Array.isArray(products) && products.length > 0) { %>
-			<%for (let i = 0; i < products.length; i++) {%>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <section class="product-box">
-                        <a href="./products/detail/<%=products[i].id%>">
-                            <figure class="product-box_image">
-                                <img class="imgIndex" src= /images/products/<%= products[i].foto %>>
-                            </figure>
-                            <article class="product-box_data">
-                                <h2><%= products[i].producto %></h2>
-                                <p><%= products[i].descripcion %></p>
-								<p>Comentarios: <%= products[i].comentarios ? products[i].comentarios.length : 0 %></p>
-                            </article>
-                        </a>
-                    </section>
-                </div>
-				<% } %>
-				<% } else { %>
-					<p class="no-results">No se encontraron resultados.</p>
-				<% } %>
+			<!-- Novedades -->
+			<div class="container products-wrapper">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="products-title">Resultados de búsqueda</h2>
+					</div>
+					<!-- Show the "ultimos" products -->
+					<% if (products && Array.isArray(products) && products.length> 0) { %>
+						<%for (let i=0; i < products.length; i++) {%>
+							<div class="col-12 col-sm-6 col-lg-3">
+								<section class="product-box">
+									<a href="./products/detail/<%=products[i].id%>">
+										<figure class="product-box_image">
+											<img class="imgIndex" src=/images/products/<%=products[i].foto %>>
+										</figure>
+										<article class="product-box_data">
+											<h2>
+												<%= products[i].producto %>
+											</h2>
+											<p>
+												<%= products[i].descripcion %>
+											</p>
+											<p>Comentarios: <%= products[i].comentarios ? products[i].comentarios.length
+													: 0 %>
+											</p>
+										</article>
+									</a>
+								</section>
+							</div>
+							<% } %>
+								<% } else { %>
+									<p class="no-results">No se encontraron resultados.</p>
+									<% } %>
 
-	<!-- footer -->
-	<%- include('./partials/footer') %>
-	<!-- /footer -->
-</body>
+										<!-- footer -->
+										<%- include('./partials/footer') %>
+											<!-- /footer -->
+	</body>
 
 </html>
