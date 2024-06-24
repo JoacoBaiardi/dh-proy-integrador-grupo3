@@ -67,6 +67,59 @@ const productsController = {
                 return res.render('product-add', { dbError: 'Error al guardar el producto', oldData: req.body });
             });
     },
+    editProd: function (req, res) {
+        const productId = req.params.id;
+        db.Product.findByPk(productId)
+            .then(product => {
+                if (!product) {
+                    return res.status(404).send('Producto no encontrado')
+                }
+                if (product.usuario_id !== req.session.user.id) {
+                    return res.status(403).send('No tienes permiso para editar este producto');
+                }
+                res.render('editProduct', { product });
+            })
+            .catch(error => {
+                console.error('Error al obtener el producto:', error);
+                res.status(500).send('Error interno del servidor');
+            });
+    },
+    subProd: function (req, res) {
+        const productId = req.params.id;
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(400).render('editProduct', { errors: errors.array(), product: req.body });
+        }
+        db.Product.findByPk(productId)
+            .then(product => {
+                if (!product) {
+                    return res.status(404).send('Producto no encontrado');
+                }
+                if (product.usuario_id !== req.session.user.id) {
+                    return res.status(403).send('No tienes permiso para editar este producto');
+                }
+
+                product.update({
+                    foto: req.body.foto,
+                    producto: req.body.producto,
+                    descripcion: req.body.descripcion,
+                    updated_at: new Date()
+                })
+                    .then(() => {
+                        res.redirect(`/products/detail/${productId}`);
+                    })
+                    .catch(error => {
+                        console.error('Error al actualizar el producto:', error);
+                        res.status(500).send('Error interno del servidor');
+                    });
+            })
+            .catch(error => {
+                console.error('Error al obtener el producto:', error);
+                res.status(500).send('Error interno del servidor');
+            });
+    }
 }
+
 
 module.exports = productsController

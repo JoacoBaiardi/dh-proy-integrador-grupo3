@@ -15,9 +15,9 @@
                 <h2 class="products-title">Editar Producto</h2>
             </div>
             <div class="col-12">
-                <form action="/products/edit/<%= producto.id %>" method="POST" novalidate>
+                <form action="/products/edit/<%= product.id %>" method="POST" novalidate>
                     <label for="foto">Imagen del Producto:</label><br>
-                    <input type="text" id="foto" name="foto" value="<%= producto.foto %>"><br><br>
+                    <input type="text" id="foto" name="foto" value="<%= product.foto %>"><br><br>
 
                     <% if (locals.errors && errors.foto) { %>
                         <div class="error-msg">
@@ -28,9 +28,9 @@
                     <br>
 
                     <label for="producto">Nombre del Producto:</label><br>
-                    <input type="text" id="producto" name="producto" value="<%= producto.producto %>"><br><br>
+                    <input type="text" id="producto" name="producto" value="<%= product.producto %>"><br><br>
 
-                    <% if (locals.errors && errors.producto) { %>
+                    <% if (locals.errors && errors.product) { %>
                         <div class="error-msg">
                             <%= errors.producto.msg %>                                
                         </div>                            
@@ -39,7 +39,7 @@
                     <br>
 
                     <label for="descripcion">Descripción del Producto:</label><br>
-                    <input type="text" id="descripcion" name="descripcion" value="<%= producto.descripcion %>"><br><br>
+                    <input type="text" id="descripcion" name="descripcion" value="<%= product.descripcion %>"><br><br>
 
                     <% if (locals.errors && errors.descripcion) { %>
                         <div class="error-msg">

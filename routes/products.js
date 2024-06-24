@@ -8,6 +8,7 @@ var addValidator = require('../middlewares/productAddValidator')
 router.get('/detail/:id', productsController.detail);
 router.get('/add', productsController.prodAdd)
 router.post ("/productAdd", addValidator, productsController.saveProd) 
-
+router.get('/edit/:id', addValidator, productsController.editProd)
+router.post('/edit/:id', addValidator, productsController.subProd)
 
 module.exports = router;
