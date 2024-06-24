@@ -4,8 +4,11 @@ const { Op } = db.Sequelize;
 const mainController = {
     main: function (req, res) {
         db.Product.findAll({
-            order: [['created_at', 'DESC']], // Ordenar por fecha de creación descendente
-            limit: 4 // Opcional: Limitar el número de productos a mostrar en la página principal
+            order: [['created_at', 'DESC']], 
+            limit: 4, 
+            include: [
+                { model: db.Comment, as: 'comentarios' }
+            ]
         })
             .then(products => {
                 res.render('index', { title: 'Motor Market', products });

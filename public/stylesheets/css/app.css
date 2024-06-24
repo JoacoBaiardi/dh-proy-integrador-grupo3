@@ -635,6 +635,23 @@ textarea.form-input {
   box-sizing: border-box;
 }
 
+.creator-info {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.creator-link {
+  color: #666; /* Color azul, puedes cambiarlo según tu paleta de colores */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.creator-link:hover {
+  text-decoration: underline;
+}
+
+
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {
