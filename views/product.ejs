@@ -24,12 +24,18 @@
                     <p class="product-detail-description">
                         <%= producto.descripcion %>
                     </p>
-                    <!-- Mostrar usuario creador del producto -->
                     <p class="creator-info">Creado por:
                         <strong><a href="/users/profile/<%= producto.usuarios.id %>" class="creator-link"><%= producto.usuarios.usuario %></a></strong>
                     </p>
                 </article>
                 <div class="col-12 col-lg-4">
+
+					<% if (user && user.id === producto.usuario_id) { %>
+                        <form action="/products/delete/<%= producto.id %>" method="POST" style="margin-top: 10px;">
+                            <button type="submit" class="delete-button">Borrar Producto</button>
+                        </form>
+                    <% } %>
+
                     <% if (producto.comentarios.length > 0) { %>
                         <h3>Comentarios</h3>
                         <% producto.comentarios.forEach(comment => { %>

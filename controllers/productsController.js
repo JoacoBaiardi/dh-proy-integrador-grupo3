@@ -140,6 +140,42 @@ const productsController = {
                 console.log("Error al guardar", e);
                 return res.status(500).send("Error al guardar el comentario.");
             });
+    },
+    deleteProd: function (req, res) {
+        const productId = req.params.id;
+
+        db.Product.findByPk(productId)
+            .then(product => {
+                if (!product) {
+                    return res.status(404).send('Producto no encontrado');
+                }
+                if (product.usuario_id !== req.session.user.id) {
+                    return res.status(403).send('No tienes permiso para eliminar este producto');
+                }
+                db.Comment.destroy({
+                    where: { producto_id: productId }
+                })
+                .then(() => {
+                    db.Product.destroy({
+                        where: { id: productId }
+                    })
+                    .then(() => {
+                        res.redirect('/');
+                    })
+                    .catch(error => {
+                        console.error('Error al eliminar el producto:', error);
+                        res.status(500).send('Error interno del servidor');
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al eliminar los comentarios:', error);
+                    res.status(500).send('Error interno del servidor');
+                });
+            })
+            .catch(error => {
+                console.error('Error al obtener el producto:', error);
+                res.status(500).send('Error interno del servidor');
+            });
     }
 }
 

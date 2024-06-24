@@ -22,6 +22,9 @@ const mainController = {
     busqueda: function (req, res) {
         const search = req.query.search;
         const filtro_busqueda = {
+            include: [
+                { model: db.Comment, as: 'comentarios' }
+            ],
             where: {
                 [Op.or]: [
                     { producto: { [Op.like]: `%${search}%` } },

@@ -11,5 +11,5 @@ router.post ("/productAdd", addValidator, productsController.saveProd)
 router.get('/edit/:id', addValidator, productsController.editProd)
 router.post('/edit/:id', addValidator, productsController.subProd)
 router.post('/comments/:id', productsController.addComment)
-
+router.post('/delete/:id', productsController.deleteProd)
 module.exports = router;

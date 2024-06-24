@@ -11,11 +11,9 @@ const editValidation = [
     body("password")
         .optional()
         .custom((value, { req }) => {
-            // Si el campo password está presente pero vacío, permitirlo sin error
             if (!value && !req.body.password) {
                 return true;
             }
-            // Validar la longitud mínima si se proporciona una nueva contraseña
             if (value && value.length < 4) {
                 throw new Error("La contraseña debe tener un mínimo de 4 caracteres");
             }
